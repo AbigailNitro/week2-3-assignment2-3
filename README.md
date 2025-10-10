@@ -1,5 +1,7 @@
 In the html file, the entire website is contained within a Grid Box, which is why
-a thin black line can be seen around the edges. I made the navigation bar, the footer match the background to
+a thin black line can be seen around the edges. I made the navigation bar and the footer
+match the background to create a more seamless view. With the project cards, theyre contained
+in a column based flexbox which itself is still within the gridbox.
 
 
 
