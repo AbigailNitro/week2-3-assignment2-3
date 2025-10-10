@@ -16,9 +16,10 @@ h2 {
     color: #ffffff;
     font-family: 'Open Sans', sans-serif;
 }
-h5 {
+h3 {
     color: #4e4e4e;
     font-family: 'Open Sans', sans-serif;
+    font-size:18px;
 }
 p {
     color:#c1d1f0;
@@ -28,6 +29,12 @@ a {
     color:#ff0000;
     font-family: 'Open Sans', sans-serif;
 }
+details {
+    color:#cec3fd;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
 .header-text{
     font-size:24px;
     color:#4b4b4b;
@@ -56,6 +63,7 @@ a {
     min-height: 100vh;
     gap:8px;
     /*padding: 8px;*/
+    
     background-color: #131313;
 }
 /*define everything on grid template areas*/
@@ -78,11 +86,60 @@ footer { grid-area: footer; background-color: #000000;   padding:32px; }
 }
 
 .flex-container > div {
-    background-color: #6a6580;
+    background-color: #4f4a68;
     margin:24px;
     padding-right:240px;
     padding-left:60px;
     padding-top:30px;
     padding-bottom:20px;
     align-content: center;
+}
+
+.flex-extras {
+    display: inline-flex;
+    background-color: #1f1930;
+}
+
+.flex-extras > div {
+    background-color: #4f4a68;
+    margin:8px;
+    padding:12px;
+}
+
+ul {
+    list-style-type: none;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #131313;
+    padding:6px;
+    margin-left:-6px;
+}
+
+li a{
+    display: block;
+    color: #cecece;
+    padding:4px;
+}
+
+li a:hover {
+    background-color: #cecece;
+    color: #000000;
+    padding:4px;
+}
+
+form{
+    display: inline-block;
+    margin-left:50px;
+    color: #cecece;
+    padding:4px;
+    scale: 1.5;
+}
+input {
+    background-color: #131313;
+    color: #cecece;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input:hover {
+    background-color: #cecece;
+    color: #000000;
 }
