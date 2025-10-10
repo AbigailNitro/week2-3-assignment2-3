@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+}
+
+body {
+    background-color: black;
+}
+h1 {
+    color: #1d1d1d;
+    font-family: 'Open Sans', sans-serif;
+    font-size:64px
+    
+}
+h2 {
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+}
+h5 {
+    color: #4e4e4e;
+    font-family: 'Open Sans', sans-serif;
+}
+p {
+    color:#c1d1f0;
+    font-family: 'Open Sans', sans-serif;
+}
+a {
+    color:#ff0000;
+    font-family: 'Open Sans', sans-serif;
+}
+.header-text{
+    font-size:24px;
+    color:#4b4b4b;
+    background-color: #cfcfcf;
+    padding-left:32px;
+    font-family: 'Open Sans', sans-serif;
+}
+/*grid framework*/
+.grid-container {
+    display: grid;
+
+    /*define overall appearance*/
+    grid-template-areas:
+    "header header header"
+    "nav main sidebar"
+    "portf portf portf"
+    "footer footer footer";
+    /*portf is an invisible box to contain the vertical flexbox down below*/
+
+    /*define width and stretching*/
+    grid-template-columns: 150px 1fr 150px;
+
+    /*define spacing and vertical stretching*/
+    grid-template-rows: auto auto 1fr auto;
+
+    min-height: 100vh;
+    gap:8px;
+    /*padding: 8px;*/
+    background-color: #131313;
+}
+/*define everything on grid template areas*/
+header { grid-area: header; background-color: #cfcfcf; padding:6px; padding-left:20px;}
+nav    { grid-area: nav;    background-color: #000000;     padding:12px; color: #cecece;}
+main   { grid-area: main;   background-color: #303030;  padding:24px; overflow:auto;}
+aside  { grid-area: sidebar;background-color: #202020; padding:12px;}
+portf  { grid-area: portf;  background-color: #131313;   padding:16px; }
+footer { grid-area: footer; background-color: #000000;   padding:32px; }
+
+/*flexbox defineeee*/
+.flex-container {
+    display: flex;
+    background-color: #1f1930;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: center;
+    justify-content: space-around;
+    
+}
+
+.flex-container > div {
+    background-color: #6a6580;
+    margin:24px;
+    padding-right:240px;
+    padding-left:60px;
+    padding-top:30px;
+    padding-bottom:20px;
+    align-content: center;
+}

@@ -1,3 +1,13 @@
+In the html file, the entire website is contained within a Grid Box, which is why
+a thin black line can be seen around the edges. I made the navigation bar, the footer match the background to
+
+
+
+
+
+
+
+
 guide for me to follow/notes
 -single page portfolio
 -external css for styles
