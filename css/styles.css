@@ -9,7 +9,7 @@ body {
 h1 {
     color: #1d1d1d;
     font-family: 'Open Sans', sans-serif;
-    font-size:64px
+    font-size: 5vmax;
     
 }
 h2 {
@@ -33,7 +33,10 @@ details {
     color:#cec3fd;
     font-family: 'Open Sans', sans-serif;
 }
-
+img {
+    max-width:100%;
+    height:auto;
+}
 
 .header-text{
     font-size:24px;
@@ -61,8 +64,15 @@ details {
     grid-template-rows: auto auto 1fr auto;
 
     min-height: 100vh;
-    gap:8px;
+    gap:2px;
     /*padding: 8px;*/
+    @media screen and (min-width: 768px) {
+        gap: 4px;
+    }
+    @media screen and (min-width: 1024px) {
+        gap: 8px;
+    }
+    
     
     background-color: #131313;
 }
@@ -70,7 +80,14 @@ details {
 header { grid-area: header; background-color: #cfcfcf; padding:6px; padding-left:20px;}
 nav    { grid-area: nav;    background-color: #000000;     padding:12px; color: #cecece;}
 main   { grid-area: main;   background-color: #303030;  padding:24px; overflow:auto;}
-aside  { grid-area: sidebar;background-color: #202020; padding:12px;}
+aside  { grid-area: sidebar;background-color: #202020; padding:4px;
+    @media screen and (min-width: 768px) {
+        padding: 8px;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 12px;
+    }
+}
 portf  { grid-area: portf;  background-color: #131313;   padding:16px; }
 footer { grid-area: footer; background-color: #000000;   padding:32px; }
 
