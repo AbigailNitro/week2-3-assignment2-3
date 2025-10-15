@@ -7,3 +7,21 @@ Inside of each flexbox is another flexbox to create a little bubble in which the
 for additional images is placed.
 
 at the bottom lies the one form element: a little button that sends you away to my github profile
+
+new things needed:
+    responsive features such as:
+        Media queries (@media)
+        Flexible images (max-width)
+        Viewport units (vw, vh)
+        CSS Grid or Flexbox
+    make a bootstrap version with:
+        Bootstrap grid system
+        Bootstrap components
+        Bootstrap utilities
+    add to this doc:
+        comparison of both docs (their approach)
+
+BREAKPOINTS:
+phone       320px - 767px
+tablet      768px - 1023px
+desktop     1024px+
