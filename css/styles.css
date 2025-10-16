@@ -15,6 +15,12 @@ h1 {
 h2 {
     color: #ffffff;
     font-family: 'Open Sans', sans-serif;
+    font-size: clamp(24px, 2.1vw, 30px);
+    margin: 20px;
+    margin-left: 0px;
+}
+portf h2 {
+    font-size: clamp(32px, 3vw, 64px);
 }
 h3 {
     color: #4e4e4e;
@@ -33,10 +39,22 @@ details {
     color:#cec3fd;
     font-family: 'Open Sans', sans-serif;
 }
-img {
+
+main img {
+    width:12vh;
+    height: auto;
+}
+div.flex-container img {
     max-width:100%;
     height:auto;
+    max-height:790px;
 }
+details img {
+    max-width:100%;
+    height:auto;
+    max-height:740px;
+}
+
 
 .header-text{
     font-size:24px;
@@ -58,7 +76,17 @@ img {
     /*portf is an invisible box to contain the vertical flexbox down below*/
 
     /*define width and stretching*/
-    grid-template-columns: 150px 1fr 150px;
+    grid-template-columns: 115px 1fr 125px;
+
+    @media screen and (max-width: 520px) {
+        grid-template-columns: 125px 1fr 0px;
+    }
+    @media screen and (min-width: 768px) {
+        grid-template-columns: 125px 1fr 125px;
+    }
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: 150px 1fr 150px;
+    }
 
     /*define spacing and vertical stretching*/
     grid-template-rows: auto auto 1fr auto;
@@ -66,6 +94,7 @@ img {
     min-height: 100vh;
     gap:2px;
     /*padding: 8px;*/
+    
     @media screen and (min-width: 768px) {
         gap: 4px;
     }
@@ -78,9 +107,20 @@ img {
 }
 /*define everything on grid template areas*/
 header { grid-area: header; background-color: #cfcfcf; padding:6px; padding-left:20px;}
-nav    { grid-area: nav;    background-color: #000000;     padding:12px; color: #cecece;}
+nav    { grid-area: nav;    background-color: #000000;     padding:4px; color: #cecece;
+    @media screen and (min-width: 768px) {
+        padding: 8px;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 12px;
+    }
+    
+}
 main   { grid-area: main;   background-color: #303030;  padding:24px; overflow:auto;}
 aside  { grid-area: sidebar;background-color: #202020; padding:4px;
+    @media screen and (max-width: 520px) {
+        display:none;
+    }
     @media screen and (min-width: 768px) {
         padding: 8px;
     }
@@ -91,7 +131,7 @@ aside  { grid-area: sidebar;background-color: #202020; padding:4px;
 portf  { grid-area: portf;  background-color: #131313;   padding:16px; }
 footer { grid-area: footer; background-color: #000000;   padding:32px; }
 
-/*flexbox defineeee*/
+/*flexbox defineeee, this is for the project cards*/
 .flex-container {
     display: flex;
     background-color: #1f1930;
@@ -104,43 +144,82 @@ footer { grid-area: footer; background-color: #000000;   padding:32px; }
 
 .flex-container > div {
     background-color: #4f4a68;
-    margin:24px;
-    padding-right:240px;
-    padding-left:60px;
-    padding-top:30px;
-    padding-bottom:20px;
+    margin:8px;
+    padding-right:10px;
+    padding-left:10px;
+    padding-top:10px;
+    padding-bottom:10px;
     align-content: center;
+    @media screen and (min-width: 768px) {
+        margin:12px;
+        padding-right:30px;
+        padding-left:30px;
+        padding-top:15px;
+        padding-bottom:15px;
+    }
+    @media screen and (min-width: 1024px) {
+        margin:24px;
+        padding-right:60px;
+        padding-left:60px;
+        padding-top:30px;
+        padding-bottom:20px;
+    }
 }
 
 .flex-extras {
     display: inline-flex;
     background-color: #1f1930;
+    width:75%;
 }
 
 .flex-extras > div {
     background-color: #4f4a68;
     margin:8px;
     padding:12px;
+    width: 100%;
 }
+
 
 ul {
     list-style-type: none;
     font-family: 'Open Sans', sans-serif;
     background-color: #131313;
-    padding:6px;
-    margin-left:-6px;
+    padding:2px;
+    margin-left:-2px;
+    
+    @media screen and (min-width: 768px) {
+        padding: 4px;
+        margin-left: -4px;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 6px;
+        margin-left: -6px;
+    }
+    
 }
 
 li a{
     display: block;
     color: #cecece;
-    padding:4px;
+    padding:2px;
+    @media screen and (min-width: 768px) {
+        padding: 3px;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 4px;
+    }
 }
 
 li a:hover {
     background-color: #cecece;
     color: #000000;
-    padding:4px;
+    padding:2px;
+    @media screen and (min-width: 768px) {
+        padding: 3px;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 4px;
+    }
 }
 
 form{
@@ -149,6 +228,7 @@ form{
     color: #cecece;
     padding:4px;
     scale: 1.5;
+    
 }
 input {
     background-color: #131313;
