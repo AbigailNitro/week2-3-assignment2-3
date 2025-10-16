@@ -25,3 +25,10 @@ BREAKPOINTS:
 phone       320px - 767px
 tablet      768px - 1023px
 desktop     1024px+
+
+in the main document, media queries determine the margins and padding of both flexboxes and grids.
+for example, if your display is thinner than 520px, you cant see the contact menu, but past that its visible.
+each image scales with your browser, with the max height being 790 or 740 depending on whether its a 
+main image or sub image.
+the self portrait, and the headings are similarly scaled, but with vw, the latter clamped down.
+in terms of the grid box and flexboxes, theyre the same as before but with media queries to keep them a good size.
